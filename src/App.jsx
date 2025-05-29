@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
+const BASE = import.meta.env.BASE_URL
+
+
 // 1) Typewriter snippet
 const codeString = `const Hamza_Ait_Hssayene = {
   role: "Full-stack Software Engineer",
@@ -100,28 +103,28 @@ function HorizontalScroll({ children }) {
 const projects = [
   {
     title: "AI Selfishness Simulator",
-    image: "/images/ai-selfishness.png",
+    image: `${BASE}images/ai-selfishness.png`,
     description:
       "Simulates AI agents with selfish or cooperative traits and evaluates their survival and reproduction rates based on differences in behavior and decision-making strategies.",
     tech: ["JavaScript", "Neural Networks", "Reinforcement Learning"],
   },
   {
     title: "MoodZik",
-    image: "/images/moodzik.png",
+    image: `${BASE}images/moodzik.png`,
     description:
       "Web app that uses machine learning to detect a user's emotion via webcam and generates music from scratch to match their mood.",
     tech: ["Python", "TensorFlow", "Keras", "OpenCV", "Flask"],
   },
   {
     title: "Employee Evaluation Platform",
-    image: "/images/employee-eval.png",
+    image: `${BASE}images/employee-eval.png`,
     description:
       "Internal HR tool for survey creation, scoring, and trend analytics, built for Axum.",
     tech: ["Express.js", "Vue.js", "MongoDB"],
   },
   {
     title: "AquaDentist",
-    image: "/images/aquadentist.png",
+    image: `${BASE}images/aquadentist.png`,
     description:
       "AquaDentist is a dental practice management solution I co-founded and developed. It streamlines dental operations by offering features like patient scheduling, billing, and inventory management. The project involved building a robust, high-performance backend capable of handling millions of appointment records for thousands of concurrent dental clinics, ensuring uninterrupted service and data integrity. The development utilized Express.js, Angular, and MongoDB. Currently in production.",
     tech: ["Express.js", "Angular", "MongoDB"],
@@ -140,7 +143,7 @@ export default function App() {
         <section className="min-h-screen flex items-center justify-center p-8">
           <div className="relative">
             <img
-              src="/images/retro-computer.png"
+              src={`${BASE}images/retro-computer.png`}
               alt="Retro Computer"
               className="w-[650px] mx-auto block"
             />
@@ -187,7 +190,7 @@ export default function App() {
         >
           <div className="backdrop-blur-lg bg-white bg-opacity-20 rounded-2xl p-8 max-w-3xl w-full flex flex-col md:flex-row items-center gap-6 shadow-xl">
             <img
-              src="/images/portrait.jpg"
+              src={`${BASE}images/portrait.jpg`}
               alt="Hamza"
               className="w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-white"
             />
