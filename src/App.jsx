@@ -165,7 +165,7 @@ export default function App() {
               />
               {showBtn && (
                 <motion.a
-                  href="/resume.pdf"
+                  href={`${BASE}resume.pdf`}
                   download
                   className="absolute bottom-4 right-4 font-mono text-green-300 hover:text-green-100"
                   initial={{ opacity: 0 }}
