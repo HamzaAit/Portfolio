@@ -161,6 +161,7 @@ const projects = [
 export default function App() {
   const [showBtn, setShowBtn] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <>
@@ -281,6 +282,30 @@ export default function App() {
               Use arrow buttons or Shift + scroll to navigate • {activeIdx + 1} of {projects.length}
             </div>
           </div>
+        </section>
+
+        <section
+          id="daily-challenge"
+          className="flex flex-col items-center px-4 py-16 sm:px-6 sm:py-20"
+        >
+          {loggedIn ? (
+            <div className="text-center text-white">
+              {/* Placeholder for the actual challenge content */}
+              <p className="mb-2 text-lg">Today's challenge goes here.</p>
+            </div>
+          ) : (
+            <p className="text-center text-gray-200 text-sm sm:text-base">
+              Please{' '}
+              <button
+                type="button"
+                onClick={() => setLoggedIn(true)}
+                className="underline text-green-300 hover:text-green-100"
+              >
+                log in
+              </button>{' '}
+              to view and complete the daily challenge.
+            </p>
+          )}
         </section>
 
         <section id="contact" className="flex flex-col items-center px-4 py-16 sm:px-6 sm:py-20 bg-gray-800 bg-opacity-50">
