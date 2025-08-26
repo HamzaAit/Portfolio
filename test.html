@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .success {
+            background: #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .links {
+            margin-top: 30px;
+        }
+        a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="success">
+        <h1>🎉 Success!</h1>
+        <p>Your mobile connection is working!</p>
+        <p>IP: <span id="ip"></span></p>
+        <p>Time: <span id="time"></span></p>
+    </div>
+    
+    <div class="links">
+        <a href="/">← Go to Portfolio</a>
+    </div>
+
+    <script>
+        // Show current time
+        document.getElementById('time').textContent = new Date().toLocaleTimeString();
+        
+        // Try to show IP (this won't work from client-side, but we'll show the URL)
+        document.getElementById('ip').textContent = window.location.host;
+    </script>
+</body>
+</html>
