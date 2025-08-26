@@ -156,6 +156,13 @@ const projects = [
       "AquaDentist is a dental practice management solution I co-founded and developed. It streamlines dental operations by offering features like patient scheduling, billing, and inventory management. The project involved building a robust, high-performance backend capable of handling millions of appointment records for thousands of concurrent dental clinics, ensuring uninterrupted service and data integrity. The development utilized Express.js, Angular, and MongoDB. Currently in production.",
     tech: ["Express.js", "Angular", "MongoDB"],
   },
+  {
+    title: "NarriClip",
+    image: `${BASE}images/narriclip.png`,
+    description:
+      "NarriClip is an AI-driven content creation platform that transforms written stories into engaging video clips. It automatically combines narrated voiceovers (using Amazon Polly TTS), synced subtitles, and dynamic Minecraft-style gameplay footage to produce entertaining and shareable videos. The platform is designed for storytelling communities (e.g., Reddit stories) and uses a credit-based system for scalability and monetization.",
+    tech: ["ExpressJS", "NextJS", "Supabase", "Polly", "S3", "FFmpeg", "Stripe"],
+  },
 ];
 
 export default function App() {
